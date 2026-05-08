@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "FiskeJournal",
+    "slug": "fiskejournal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A1628"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "dk.fiskejournal.privat",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "FiskeJournal bruger din placering til at hente vejrdata for den aktuelle fiskeplads."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "FiskeJournal bruger dit fotobibliotek til at tilføje billeder af dine fangster.",
+          "cameraPermission": "FiskeJournal bruger kameraet til at fotografere dine fangster."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "FiskeJournal gemmer billeder i dit fotobibliotek.",
+          "savePhotosPermission": "FiskeJournal gemmer billeder i dit fotobibliotek."
+        }
+      ]
+    ],
+    "scheme": "fiskejournal",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
